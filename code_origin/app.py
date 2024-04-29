@@ -1,7 +1,7 @@
 import tkinter as tk
 from tkinter import filedialog
 from PIL import Image, ImageTk
-from cas_pratique.functions import * # Remplacez par l'importation de votre bibliothèque ML et de votre modèle
+from functions import * # Remplacez par l'importation de votre bibliothèque ML et de votre modèle
 
 
 import pandas as pd
@@ -36,7 +36,7 @@ class ImagePredictionApp:
 
     def load_model(self):
         # Chargez votre modèle ici en utilisant votre bibliothèque ML
-        self.model = tf.keras.models.load_model("vgg16_side_OG2ID_classif")
+        self.model = tf.keras.models.load_model("model/og_model.h5")
         self.model.trainable = False
 
         
